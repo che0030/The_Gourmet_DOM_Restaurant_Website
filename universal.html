@@ -1,0 +1,49 @@
+<!-- universal top nav bar paste -->
+<head>
+    <!-- font awesome icons kit link to enable fb insta etc; search icon in their site > paste in HTML -->
+    <script src="https://kit.fontawesome.com/2c2c7ab2d3.js" crossorigin="anonymous"></script>
+
+    <!-- link your entire JS script -->
+    <script defer src="./script-all-pages.js"></script>
+</head>
+
+<body>
+    <!-- universal top nav bar paste -->
+    <header>
+        <div class="top-logo-container">
+            <a href="./index.html">
+                <img src="./Images/Logo_File/Logo_Black.png" alt="The Gourmet DOM" class="top-logo">
+                <!-- class name has changed -->
+        </div>
+        <div class="top-right-container">
+            <nav class="socials">
+                <ul class="socials-list">
+                    <li><a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram"></i>
+                        <!-- i class = font glyph = acts like text; has 2 classes -->
+                    </a></li>
+                    <li><a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></li>
+                    <li><a href="https://www.yelp.com.au/">
+                        <i class="fa-brands fa-yelp"></i>
+                    </a></li>
+                </ul>
+            </nav>
+            <nav class="dropdown" >
+                <button class ="hamburger-menu" aria-label="toggle dropdown menu" id="hamburger-menu-button">
+                <!--aria label to describe what it does for impaired -->
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </button>
+                <div class="dropdown-content" id="dropdown-js">
+                    <a href="./gallery.html">Gallery</a>
+                    <a href="">Visit</a>
+                    <a href="">Story</a>
+                    <a href="">Menu</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+<!-- end universal top header html -->
