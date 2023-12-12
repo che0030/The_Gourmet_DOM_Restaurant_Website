@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit</title>
+
+    <!-- font awesome icons kit link to enable fb insta etc; search icon in their site > paste in HTML -->
+    <script src="https://kit.fontawesome.com/2c2c7ab2d3.js" crossorigin="anonymous"></script>
+
+    <!-- your CSS linked -->
+    <link rel="stylesheet" href="./visit.css">
+    <!-- link your entire JS script -->
+    <script defer src="./Universal.js"></script> 
+</head>
+<body>
+    <header id="header-container">
+        <div class="top-logo-container">
+            <a href="./index.html">
+                <img src="./Images/Logo_File/Logo_Black.png" alt="The Gourmet DOM" class="top-logo">
+                <!-- class name has changed -->
+        </div>
+        <div class="top-right-container">
+            <nav class="socials">
+                <ul class="socials-list">
+                    <li><a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram"></i>
+                        <!-- i class = font glyph = acts like text; has 2 classes -->
+                    </a></li>
+                    <li><a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></li>
+                    <li><a href="https://www.yelp.com.au/">
+                        <i class="fa-brands fa-yelp"></i>
+                    </a></li>
+                </ul>
+            </nav>
+            <nav class="dropdown" >
+                <button class ="hamburger-menu" aria-label="toggle dropdown menu" id="hamburger-menu-button">
+                <!--aria label to describe what it does for impaired -->
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </button>
+                <div class="dropdown-content" id="dropdown-js">
+                    <a href="./gallery.html" class="hover-top-nav-links">Gallery</a>
+                    <a href="./visit.html" class="hover-top-nav-links">Visit</a>
+                    <!-- <a href="#" class="hover-top-nav-links">Story</a>  -->
+                    <a href="./credits.html" class="hover-top-nav-links">Credits</a>
+                    <!-- future insert menu -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <article>
+        <h2>&mdash;&nbsp;&nbsp;&nbsp;RESERVATIONS&nbsp;&nbsp;&nbsp;&mdash;</h2>
+        <p> Join us for Breakfast, Brunch, Lunch, or Dinner. Book your table now and create an unforgettable experience, where good food meets pleasant ambience.</p>
+    </article>
+
+    <iframe src="./mapbox.html"></iframe>
+        <!-- container that imports your map from the map document. To isolate their CSS to this container so it doesn't override your CSS -->
+
+    <footer>
+        <section class="footer-containers">
+            <address class="address-container">
+                <h5>Contact</h5>
+                <p>9835 6581</p>
+                <p>11 Nicholson St, Carlton VIC 3053</p>
+                <p>bookings@thegourmetdom.com</p>
+            </address>
+            <div class="footer-logos">
+                <h2>&mdash;&nbsp;&nbsp;&nbsp;The Gourmet DOM &nbsp;&nbsp;&nbsp;&mdash;</h2>
+                <ul class="socials-list-footer">
+                    <li><a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></li>
+                    <li><a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></li>
+                    <li><a href="https://www.yelp.com.au/">
+                        <i class="fa-brands fa-yelp"></i>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="times">
+                <h5>Hours</h5>
+                <ol class="opening-hours">
+                    <li><strong>Monday to Friday:</strong> 9:00am - 10pm</li>
+                    <li><strong>Saturday to Sunday:</strong> 9:00am - 11pm</li>
+                </ol>
+                <ol class="meal-periods">
+                    <li><strong>Brunch:</strong> 9:00am - 3:00pm</li>
+                    <li><strong>Lunch:</strong> 3:00am - 5:00pm</li>
+                    <li></li><strong>Dinner:</strong> 5:00pm+</li>
+                </ol>
+            </div> 
+        </section>
+    </footer>
+</body>
+</html>

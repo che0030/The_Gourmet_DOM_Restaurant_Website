@@ -11,12 +11,29 @@
 }
 
 /* extra misc effects */
-.hover-link {
+/* ---------------------------------------------------------------- */
+.hover-food-links {
     cursor: pointer;
 }
-.hover-link:hover {
-    opacity: 0.7;
+.hover-food-links:hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
 }
+.hover-top-nav-links:hover, .socials i.fa-brands:hover {
+    color: #BDAC7B;
+}
+
+/* slight grey for nav menu, activates on scroll with JS */
+#overlay {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
 
 /* top header fixed bar */
 /* ---------------------------------------------------------------- */
@@ -24,12 +41,11 @@ header {
     display: flex;
     align-items: center; /* aligns all containers on vertical axis*/
     justify-content: space-between;
-    /* background: rgba(0,0,0,0.4);  */
     width: 100vw; /* fixes up the flex in body  */
     padding: 15px 15px;
     background-color: transparent;
     position: fixed;
-    z-index:2;
+    z-index:5;
 }
 
 .top-logo-container img{
@@ -93,6 +109,7 @@ opacity: 0;
 #hamburger-menu-button.xbutton-active .bottom-bar {
 transform: rotate(-45deg) translate(5px, -5px);
 }
+
 
 /* dropdown menu */
 /* ---------------------------------------------------------------- */

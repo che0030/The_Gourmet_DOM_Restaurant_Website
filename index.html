@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,14 @@
     <!-- your sheets -->
     <link rel="stylesheet" href="./index.css">
     <!-- link your entire JS script -->
-    <script defer src="./script-all-pages.js"></script>
+    <script defer src="./index.js"></script>
 
 </head>
 
 <body>
   <!-- universal top nav bar paste -->
-    <header>
+  <div id="overlay"></div>
+  <header id="header-container">
         <div class="top-logo-container">
             <a href="./index.html">
                 <img src="./Images/Logo_File/Logo_Black.png" alt="The Gourmet DOM" class="top-logo">
@@ -46,10 +47,11 @@
                     <span class="bottom-bar"></span>
                 </button>
                 <div class="dropdown-content" id="dropdown-js">
-                    <a href="./gallery.html">Gallery</a>
-                    <a href="">Visit</a>
-                    <a href="">Story</a>
-                    <a href="">Menu</a>
+                    <a href="./gallery.html" class="hover-top-nav-links">Gallery</a>
+                    <a href="./visit.html" class="hover-top-nav-links">Visit</a>
+                    <!-- <a href="#" class="hover-top-nav-links">Story</a>  -->
+                    <a href="./credits.html" class="hover-top-nav-links">Credits</a>
+                    <!-- future insert menu -->
                 </div>
             </nav>
         </div>
@@ -72,9 +74,9 @@
   </nav>
     <nav class="nav-middle" id="nav-middle-js">
         <ul class="list-text-over-background">
-            <li><a href="#" class="hover-link" id="eat">Eat</a></li>
-            <li><a href="#" class="hover-link" id="drink">Drink</a></li>
-            <li><a href="#" class="hover-link" id="visit">Visit</a></li>
+            <li><a href="./gallery.html" class="hover-food-links" id="eat">Eat</a></li>
+            <li><a href="./visit.html" class="hover-food-links" id="visit">Visit</a></li>
+            <li><a href="./credits.html" class="hover-food-links" id="drink">Drink</a></li>
         </ul>
     </nav>
 

@@ -3,9 +3,9 @@
 /* also need to paste universal media queries */
 
 /* * {
-    border: 3px solid red;
+    border: 1px solid red;
 } */
-* {
+header {
     box-sizing: border-box;
     /* resolves width  overflow */
 }
@@ -23,30 +23,25 @@
     color: #BDAC7B;
 }
 
-/* slight grey for nav menu, activates on scroll with JS */
-#overlay {
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.4);
-}
-
-
 /* top header fixed bar */
 /* ---------------------------------------------------------------- */
 header {
     display: flex;
     align-items: center; /* aligns all containers on vertical axis*/
     justify-content: space-between;
-    width: 100vw; /* fixes up the flex in body  */
+    max-width: 100vw; 
+    /* fixes up the flex in body
+    width 100vw = spilling out issues due to flex not enough space, max width fixes it
+    */
     padding: 15px 15px;
     background-color: transparent;
     position: fixed;
+    left: 0;
+    right: 0;
     z-index:5;
+    box-sizing: border-box;
 }
+
 
 .top-logo-container img{
     vertical-align: middle;
@@ -78,7 +73,6 @@ header {
     color: white;
     margin: 0;
 }
-
 
 
 /* Hamburger icon */
@@ -124,6 +118,7 @@ transform: rotate(-45deg) translate(5px, -5px);
     /* border: 3px solid red; */
     display: none;
     /* coz its inside fixed index, this is boosted by the container, and the z-index here is RELATIVE to contents inside container */
+
 }
 
 /* content state 2: on JS click of hamburger (phone only), dropdown expands to full screen */
@@ -133,7 +128,7 @@ transform: rotate(-45deg) translate(5px, -5px);
     /* z index RELATIVE to the fixed header, thus -1 to go below header elements */
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%,-50%);    
+    transform: translate(-50%,-50%);   
     /* move it to the actual center */
 
     display: flex;
@@ -143,7 +138,9 @@ transform: rotate(-45deg) translate(5px, -5px);
 
     width: 100vw; 
     height: 100vh; 
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.95); 
+
+
 }
 
 .dropdown-content a {
@@ -160,80 +157,49 @@ transform: rotate(-45deg) translate(5px, -5px);
 /* end universal header content */
 
 
-/* gallery */
+
+
+/* credits page unique content */
 body {
+    /* border: 1px solid red; */
+    background-color: black;
     margin: 0;
-    /* so 1) widths hit edges of page 2) top nav overlay not bumped down */
-    background-color: white;
-    /* background-color: white; */
+    max-width: 100%;
+    color: white;
 }
-
-.gallery-grid {
-    display: grid;
-    /* background-color:black; */
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 3px;
-}
-
-.gallery-grid img {
-    object-fit: cover;
-    width: 100%;
-    height: 300px;
-}
-
-/* footer*/
-
-.footer-containers {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+main {
     text-align: center;
-    color: rgb(26, 26, 26);
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+article {
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+article h1, article h4 {
+    color: #BDAC7B;
+}
+article h1 {
+    margin-top: 0;
+}
+article .logo-image, article .unsplash-images {
+    margin-top: 50px;
+}
+article ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 30px;
+}
+article a {
+    color: white;
+    text-decoration: none;
+}
+article .logo-image, article .unsplash-images {
+    list-style: none;
+}
 
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 40px; 
-    font-weight: bold;
-    font-size: 14px;
-}
-footer .address-container h5 {
-    font-size: 18px;
-    line-height: 0;
-}
-footer .address-container p {
-    font-style: normal;
-    line-height: 10px;
-}
-.footer-logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.footer-logos h2 {
-    margin-top: 40px;
-}
-.socials-list-footer {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-}
-.socials-list-footer i.fa-brands {
-    font-size: 24px;
-    padding: 0 10px;
-    color: rgb(26, 26, 26);
-}
-.times h5 {
-    margin-top: 40px;
-    font-style: italic;
-    margin-bottom: 0px;
-    font-size: 18px;
-}
-.times ol {
-    list-style: none;
-    padding-left: 0;
-    line-height: 22px;
-}
 
 
 
@@ -255,6 +221,7 @@ footer .address-container p {
     .socials i.fa-brands {
         font-size: 20px;
         padding: 0 3px;
+        color: black;
     }
     .socials {
         display: flex;
@@ -286,7 +253,7 @@ footer .address-container p {
         font-weight:500;
     }
     .dropdown-content a {
-        color: white;
+        color: black;
         text-decoration: none;
         font-size: 20px;
         padding: 0 6px;
@@ -294,72 +261,39 @@ footer .address-container p {
 }
 /* end media query universal header */
 
-/* ---------------------------------------------------------------- */
 
-
-/* media query for gallery page content  */
+/* credits page unique content */
 @media (min-width: 1200px) {
-/* grid images */
-     /* .main-container {
-        display: flex;
-     } */
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 1.25rem;
-        column-gap: 1.25rem;
-        /* gaps not shrinking as the page gets smaller..? */
+    body {
+        background-color: white;
+        margin-top: 100px;
     }
-    .gallery-grid img {
-        width: 100%;
-        height: 600px;
-    } 
-}
-
-/* footer */
-@media (min-width: 1200px) {
-    .footer-containers {
-        flex-direction: row;
-        justify-content: space-between;
-        font-weight: normal;
-        padding: 120px 260px;
+    body, article, article a {
+        color: black;
     }
-    footer .address-container h5 {
-        font-size: large;
-        margin-bottom: 30px;
+    main {
     }
-    .footer-logos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer .address-container p {
-        font-size: 17px;
-    }
-
-    .footer-logos h2 {
+    article h1 {
+        margin: 40px;
         font-size: 40px;
-        font-weight: 500;
     }
-
-    .socials-list-footer {
-        display: flex;
-        list-style: none;
-        padding-left: 0;
+    article h4 {
+        font-size: 25px;
     }
-    .socials-list-footer i.fa-brands {
-        font-size: 28px;
+    article {
+        padding-top: 120px;
+        padding-bottom: 100px;
     }
-
-    .times h5 {
-        font-size: 18px;
-        line-height: 5px;
+    article .logo-image, article .unsplash-images {
+        margin-top: 80px;
     }
-    .times ol {
-        list-style: none;
-        font-size: 16px;
-        line-height: 20px ;
+    article ul {
+        line-height: 40px;
+        font-size: 20px;
     }
 }
+
+
+
 
 

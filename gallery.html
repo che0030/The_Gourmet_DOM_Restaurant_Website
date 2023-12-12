@@ -11,12 +11,13 @@
     <!-- your CSS linked -->
     <link rel="stylesheet" href="./gallery.css">
     <!-- link your entire JS script -->
-    <script defer src="./script-all-pages.js"></script>
+    <script defer src="./Universal.js"></script>
 </head>
 
 <body>
     <!-- universal top nav bar paste -->
-    <header>
+    <div id="overlay"></div>
+    <header id="header-container">
         <div class="top-logo-container">
             <a href="./index.html">
                 <img src="./Images/Logo_File/Logo_Black.png" alt="The Gourmet DOM" class="top-logo">
@@ -45,35 +46,69 @@
                     <span class="bottom-bar"></span>
                 </button>
                 <div class="dropdown-content" id="dropdown-js">
-                    <a href="./gallery.html">Gallery</a>
-                    <a href="">Visit</a>
-                    <a href="">Story</a>
-                    <a href="">Menu</a>
+                    <a href="./gallery.html" class="hover-top-nav-links">Gallery</a>
+                    <a href="./visit.html" class="hover-top-nav-links">Visit</a>
+                    <!-- <a href="#" class="hover-top-nav-links">Story</a>  -->
+                    <a href="./credits.html" class="hover-top-nav-links">Credits</a>
+                    <!-- future insert menu -->
                 </div>
             </nav>
         </div>
     </header>
 <!-- end universal top header html -->
-
-    <main class="gallery-grid">
-        <img src="./Images/Gallery_Images/anna-pelzer-IGfIGP5ONV0-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/mark-patterson-yVfagKpDeoc-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/maiara-belo-VjMMT-uMn20-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/kofi-okyere-xx1USWIvIFc-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/wantto-create-ewylbQ9e6go-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/alexandra-kusper-7MqA9uQZc2Y-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/amirali-mirhashemian-XtLPfib7OuM-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/bao-menglong-y_wGdAJMdOo-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/sara-cervera-zKJ-KVRW_wA-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/emy-XoByiBymX20-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/fahmi-fakhrudin-nzyzAUsbV0M-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/lucas-andrade-3Uj0GwVmOeY-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/tim-toomey-GH2JWMhZTxM-unsplash-medium.jpg" alt="">
-        <img src="./Images/Gallery_Images/bence-boros-8T5UAV6KkZA-unsplash-medium.jpg" alt="">
-    </main>
-
-    <footer>
-        
-    </footer>
+    <section class="main-container">
+        <main class="gallery-grid">
+            <img src="./Images/Gallery_Images/anna-pelzer-IGfIGP5ONV0-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/mark-patterson-yVfagKpDeoc-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/maiara-belo-VjMMT-uMn20-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/kofi-okyere-xx1USWIvIFc-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/wantto-create-ewylbQ9e6go-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/alexandra-kusper-7MqA9uQZc2Y-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/amirali-mirhashemian-XtLPfib7OuM-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/bao-menglong-y_wGdAJMdOo-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/sara-cervera-zKJ-KVRW_wA-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/emy-XoByiBymX20-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/fahmi-fakhrudin-nzyzAUsbV0M-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/lucas-andrade-3Uj0GwVmOeY-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/tim-toomey-GH2JWMhZTxM-unsplash-medium.jpg" alt="">
+            <img src="./Images/Gallery_Images/bence-boros-8T5UAV6KkZA-unsplash-medium.jpg" alt="">
+        </main>
+        <footer>
+            <section class="footer-containers">
+                <address class="address-container">
+                    <h5>Contact</h5>
+                    <p>9835 6581</p>
+                    <p>11 Nicholson St, Carlton VIC 3053</p>
+                    <p>bookings@thegourmetdom.com</p>
+                </address>
+                <div class="footer-logos">
+                    <h2>&mdash;&nbsp;&nbsp;&nbsp;The Gourmet DOM &nbsp;&nbsp;&nbsp;&mdash;</h2>
+                    <ul class="socials-list-footer">
+                        <li><a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a></li>
+                        <li><a href="https://www.facebook.com/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a></li>
+                        <li><a href="https://www.yelp.com.au/">
+                            <i class="fa-brands fa-yelp"></i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="times">
+                    <h5>Hours</h5>
+                    <ol class="opening-hours">
+                        <li><strong>Monday to Friday:</strong> 9:00am - 10pm</li>
+                        <li><strong>Saturday to Sunday:</strong> 9:00am - 11pm</li>
+                    </ol>
+                    <ol class="meal-periods">
+                        <li><strong>Brunch:</strong> 9:00am - 3:00pm</li>
+                        <li><strong>Lunch:</strong> 3:00am - 5:00pm</li>
+                        <li></li><strong>Dinner:</strong> 5:00pm+</li>
+                    </ol>
+                </div> 
+            </section>
+        </footer>
+    </section>
 </body>
 </html>
